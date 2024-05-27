@@ -3,13 +3,157 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="styles.css">
-    <title>Document</title>
+    <title>Inicio Sistema</title>
 </head>
-<body>
-    <h1>hola mundo</h1>
-    <button type="button" class="btn btn-primary">Primary</button>
+<body class="">
+    
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Dropdown
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <a href="principal.html" class="btn btn-outline-success" type="submit">Search</a>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <!-- Fin de la barra de navegación -->
+
+    <!-- Contenedor principal -->
+    <div class="container-fluid">
+        <div class="row">
+            <nav class="col-md-3 col-lg-2 d-md-block bg-light sidebar sidebar-sticky">
+                <div class="sidebar-heading">
+                    "ESCUELA PARTICULAR MIXTA AGUILAS DEL SABER"
+                </div>
+                <div class="sidebar-sticky">
+                    <h5 class="sidebar-heading">Menú</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#" onclick="mostrarContenido('inicio')">
+                                Inicio
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" onclick="mostrarContenido('estudiante')">
+                                Estudiante
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" onclick="mostrarContenido('docente')">
+                                Docente
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" onclick="mostrarContenido('tareas')">
+                                Tareas
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" onclick="mostrarContenido('representante')">
+                                Representante
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
+                <div id="contenido">
+                    <!-- Aquí va el contenido que se mostrará según la opción del menú -->
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <div class="content">
+        <section class="inicio" id="inicio">
+            <h2 class="tabla">Inicio</h2>
+            <p>Bienvenido a la página de inicio.</p>
+        </section>
+        <section id="estudiante">
+            <h2 class="tabla">Registro de Estudiante</h2>
+            <form class="Tablas">
+                <label for="cedula">Cédula:</label><br>
+                <input type="number" maxlength="10" id="cedula" name="cedula" required><br>
+                <label for="nombres_estudiante">Nombres:</label><br>
+                <input type="text" id="nombres_estudiante" name="nombres_estudiante"><br>
+                <label for="apellidos_estudiante">Apellidos:</label><br>
+                <input type="text" id="apellidos_estudiante" name="apellidos_estudiante"><br>
+                <label for="edad_estudiante">Edad:</label><br>
+                <input type="number" id="edad_estudiante" name="edad_estudiante" min="5"required><br>
+                <label for="grado">Grado:</label><br>
+                <input type="text" id="grado_estudiante" name="grado_estudiante"><br>
+                <label for="cedula_representante">Cedula/Representante:</label><br>
+                <input type="number" id="nombre_representante" name="nombre_representante"><br><br>
+                <input class="boton" type="submit" value="Guardar">
+            </form>
+        </section>
+        <section id="docente">
+            <h2 class="tabla">Registro de Docente</h2>
+            <form class="Tablas">
+                <label for="cedula">Cédula:</label><br>
+                <input type="number" id="cedula" name="cedula"><br>
+                <label for="nombres_estudiante">Nombres:</label><br>
+                <input type="text" id="nombres_estudiante" name="nombres_estudiante"><br>
+                <label for="apellidos_estudiante">Apellidos:</label><br>
+                <input type="text" id="apellidos_estudiante" name="apellidos_estudiante"><br>
+                
+                <label for="grado">Grado:</label><br>
+                <input type="text" id="grado_estudiante" name="grado_estudiante"><br>
+                <label for="email">Correo:</label><br>
+                <input type="email" id="email" name="email"><br>
+                <label for="telefono">Telefono:</label><br>
+                <input type="number" id="telefono" name="telefono"><br><br>
+                <input class="boton" type="submit" value="Guardar">
+            </form>
+            <!-- Formulario para datos del docente -->
+        </section>
+        <section id="tareas">
+            <h2 class="tabla">Tareas</h2>
+            <label for="tarea">Descripción:</label><br>
+            <input type=" text" id=" descripción" name="descricion"><br>
+            
+            
+            <!-- Formulario para tareas -->
+        </section>
+        <section id="representante">
+            <h2>Representante</h2>
+            <!-- Formulario para datos del representante -->
+        </section>
+    </div>
+    
     
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
